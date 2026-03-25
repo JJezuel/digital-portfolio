@@ -236,9 +236,7 @@ nav {
     align-items: center; 
     justify-content: center;
 }
-.exp-card-img-inner svg { 
-    fill: rgba(255,255,255,.9); 
-}
+
 .exp-card-body { 
     padding: 20px; 
 }
