@@ -519,5 +519,27 @@ nav {
 }
 .btn-connect:hover { background: #FFFFFF; }
 
+/* FOOTER */
+footer {
+    background: #0A0F1E;
+    padding: 28px 80px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+}
+.footer-left {
+    font-size: 13px; font-weight: 600; color: #FFFFFF;
+}
+.footer-left span { color: #4A7FA5; }
+.footer-mid {
+    font-size: 12px; color: #64748B; letter-spacing: .04em;
+}
+.footer-mid span { margin: 0 6px; color: #1B2B47; }
+.footer-right { display: flex; gap: 20px; }
+.footer-right a {
+    font-size: 12px; color: #64748B; text-decoration: none;
+    transition: color .2s;
+}
+.footer-right a:hover { color: #A8C4DF; }
+
 
 
