@@ -295,4 +295,48 @@ nav {
     font-weight: 600; 
 }
 
+/* CV CTA BAR */
+.section-cv-bar {
+    background: #1B2B47;
+    padding: 48px 80px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    gap: 24px; 
+    flex-wrap: wrap;
+}
+.cv-bar-text h3 {
+    font-size: 22px; 
+    font-weight: 700; 
+    color: #FFFFFF;
+    letter-spacing: -.01em; 
+    margin-bottom: 6px;
+}
+.cv-bar-text p { 
+    font-size: 14px; 
+    color: #A8C4DF; 
+    line-height: 1.5; 
+    max-width: 480px; 
+}
+.btn-cv {
+    display: inline-flex; 
+    align-items: center; 
+    gap: 10px; 
+    flex-shrink: 0;
+    background: #A8C4DF; 
+    color: #0F172A;
+    font-size: 14px; 
+    font-weight: 700; 
+    letter-spacing: .04em;
+    text-transform: uppercase; 
+    padding: 14px 30px;
+    border-radius: 7px; 
+    text-decoration: none; 
+    transition: background .2s;
+    white-space: nowrap;
+}
+.btn-cv:hover { 
+    background: #FFFFFF; 
+}
+
 
