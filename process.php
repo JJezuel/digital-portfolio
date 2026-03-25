@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include 'config.php';
 
 // Connect
@@ -16,8 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $category  = htmlspecialchars($_POST['category']);
     $challenge = htmlspecialchars($_POST['challenge']);
 
-    // Insert into Database (Table name: contacts)
-    $stmt = $conn->prepare("INSERT INTO contacts (name, email, category, challenge) VALUES (?, ?, ?, ?)");
+    // Insert into Database (Table name: submissions)
+    $stmt = $conn->prepare("INSERT INTO submissions (name, email, category, challenge) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $name, $email, $category, $challenge);
 
     if ($stmt->execute()) {
