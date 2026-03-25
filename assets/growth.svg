@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" width="420" height="280">
+
+  <!-- Baseline -->
+  <line x1="16" y1="258" x2="404" y2="258" stroke="white" stroke-width="1.5" opacity="0.25"/>
+
+  <!-- Ascending bars (low-left to high-right) -->
+  <rect x="20"  y="208" width="80" height="50"  rx="6" fill="rgba(255,255,255,0.15)"/>
+  <rect x="120" y="163" width="80" height="95"  rx="6" fill="rgba(255,255,255,0.2)"/>
+  <rect x="220" y="118" width="80" height="140" rx="6" fill="rgba(255,255,255,0.26)"/>
+  <rect x="320" y="73"  width="80" height="185" rx="6" fill="rgba(255,255,255,0.33)"/>
+
+  <!-- Dashed trend line -->
+  <polyline points="60,182 160,137 260,92 360,47" fill="none" stroke="white" stroke-width="1.8" stroke-dasharray="5 4" opacity="0.55"/>
+  <!-- Arrow tip -->
+  <polygon points="360,47 352,56 368,56" fill="white" opacity="0.55" transform="rotate(-55 360 47) translate(0,-4)"/>
+
+  <!-- Circle 1: CompTIA (shield) at 60,182 -->
+  <circle cx="60"  cy="182" r="22" fill="rgba(255,255,255,0.18)" stroke="white" stroke-width="1.5" opacity="0.7"/>
+  <path d="M60,169 L70,173 L70,180 Q70,188 60,192 Q50,188 50,180 L50,173 Z" fill="white" opacity="0.85"/>
+  <text x="60" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="#4A7FA5" opacity="0.9">A+</text>
+
+  <!-- Circle 2: Mentorship (two people) at 160,137 -->
+  <circle cx="160" cy="137" r="22" fill="rgba(255,255,255,0.18)" stroke="white" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="154" cy="128" r="5.5" fill="white" opacity="0.85"/>
+  <rect   x="148"  y="134" width="12" height="13" rx="4" fill="white" opacity="0.85"/>
+  <circle cx="167" cy="128" r="5.5" fill="white" opacity="0.85"/>
+  <rect   x="161"  y="134" width="12" height="13" rx="4" fill="white" opacity="0.85"/>
+
+  <!-- Circle 3: Degree (graduation cap) at 260,92 -->
+  <circle cx="260" cy="92"  r="22" fill="rgba(255,255,255,0.18)" stroke="white" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="260,79 276,86 260,93 244,86" fill="white" opacity="0.9"/>
+  <rect x="250" y="88" width="20" height="10" rx="5" fill="white" opacity="0.75"/>
+  <line x1="276" y1="86" x2="276" y2="96" stroke="white" stroke-width="2" opacity="0.7"/>
+  <circle cx="276" cy="97" r="2.5" fill="white" opacity="0.7"/>
+
+  <!-- Circle 4: Reading (open book) at 360,47 -->
+  <circle cx="360" cy="47"  r="22" fill="rgba(255,255,255,0.18)" stroke="white" stroke-width="1.5" opacity="0.7"/>
+  <rect x="358" y="36" width="3" height="22" rx="1.5" fill="white" opacity="0.9"/>
+  <path d="M358,36 Q344,34 342,52 L358,58 Z" fill="white" opacity="0.8"/>
+  <path d="M361,36 Q375,34 377,52 L361,58 Z" fill="white" opacity="0.8"/>
+  <line x1="347" y1="43" x2="357" y2="45" stroke="rgba(74,127,165,0.7)" stroke-width="1"/>
+  <line x1="347" y1="49" x2="357" y2="51" stroke="rgba(74,127,165,0.7)" stroke-width="1"/>
+  <line x1="363" y1="43" x2="373" y2="45" stroke="rgba(74,127,165,0.7)" stroke-width="1"/>
+  <line x1="363" y1="49" x2="373" y2="51" stroke="rgba(74,127,165,0.7)" stroke-width="1"/>
+
+  <!-- Step labels -->
+  <text x="60"  y="236" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white" opacity="0.75" letter-spacing="0.05em">COMPTIA</text>
+  <text x="60"  y="248" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"  font-weight="500" fill="white" opacity="0.55">A+ &amp; N+</text>
+  <text x="160" y="236" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white" opacity="0.75" letter-spacing="0.05em">MENTORSHIP</text>
+  <text x="160" y="248" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"  font-weight="500" fill="white" opacity="0.55">Marc Aurel</text>
+  <text x="260" y="236" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white" opacity="0.75" letter-spacing="0.05em">DEGREE</text>
+  <text x="260" y="248" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"  font-weight="500" fill="white" opacity="0.55">BSc OPIT</text>
+  <text x="360" y="236" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white" opacity="0.75" letter-spacing="0.05em">READING</text>
+  <text x="360" y="248" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"  font-weight="500" fill="white" opacity="0.55">30+ books</text>
+
+</svg>
