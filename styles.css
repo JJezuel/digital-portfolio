@@ -67,3 +67,105 @@ nav {
     background: #4A7FA5; 
 }
 
+/* HERO */
+.hero {
+    background: #FFFFFF;
+    padding: 100px 80px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    gap: 60px;
+}
+.hero-text { 
+    max-width: 580px; 
+}
+
+.hero h1 {
+    font-size: 52px; 
+    font-weight: 700; 
+    color: #0F172A;
+    line-height: 1.1; 
+    letter-spacing: -.02em; 
+    margin-bottom: 20px;
+}
+.hero h1 span { 
+    color: #1B2B47; 
+}
+.hero p {
+    font-size: 17px; 
+    color: #64748B; 
+    line-height: 1.7;
+    margin-bottom: 32px; 
+    max-width: 480px;
+}
+.hero-ctas { 
+    display: flex; 
+    gap: 14px; 
+    align-items: center; 
+}
+.btn-primary {
+    background: #1B2B47; 
+    color: #FFFFFF;
+    font-size: 14px; 
+    font-weight: 600;
+    padding: 14px 28px; 
+    border-radius: 7px;
+    text-decoration: none; 
+    transition: background .2s;
+}
+.btn-primary:hover { 
+    background: #4A7FA5; 
+}
+.btn-secondary {
+    background: transparent; 
+    color: #1B2B47;
+    font-size: 14px; 
+    font-weight: 600;
+    padding: 14px 28px; 
+    border-radius: 7px;
+    border: 1.5px solid #1B2B47;
+    text-decoration: none; 
+    transition: all .2s;
+}
+.btn-secondary:hover { 
+    background: #1B2B47; color: #fff; 
+}
+
+/* hero photo */
+.hero-photo-wrap {
+    flex-shrink: 0;
+    position: relative;
+}
+.hero-photo-ring {
+    width: 340px; 
+    height: 340px; 
+    border-radius: 50%;
+    border: 4px solid #A8C4DF;
+    padding: 8px;
+    background: #FFFFFF;
+    box-shadow: 0 20px 60px rgba(27,43,71,.12);
+}
+.hero-photo {
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%;
+    background: #1B2B47;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.hero-photo img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center top;
+    border-radius: 50%;
+}
+.hero-photo-placeholder {
+    font-size: 64px; 
+    font-weight: 700; 
+    color: rgba(255,255,255,.9);
+    letter-spacing: -.02em;
+}
