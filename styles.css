@@ -339,4 +339,185 @@ nav {
     background: #FFFFFF; 
 }
 
+/* ─── COMPETITIVE EDGE ────────────────────────────────── */
+.section-edge {
+    background: #FFFFFF;
+    padding: 80px 80px;
+}
+.edge-item {
+    display: flex; 
+    align-items: center; 
+    gap: 60px;
+    padding: 52px 0;
+    border-bottom: 1px solid #E2E8F0;
+}
+.edge-item:last-child { 
+    border-bottom: none; 
+    padding-bottom: 0; 
+}
+.edge-item.reverse { 
+    flex-direction: row-reverse; 
+}
+.edge-img {
+    flex-shrink: 0; 
+    width: 420px; 
+    height: 280px;
+    border-radius: 14px;
+    background: #1B2B47;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.edge-img-placeholder {
+    width: 72px; 
+    height: 72px; 
+    border-radius: 50%;
+    background: rgba(255,255,255,.2);
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.edge-img-placeholder svg { 
+    fill: rgba(255,255,255,.7); 
+}
+.edge-illustration { 
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+    object-fit: fill; 
+    border-radius: 14px; 
+}
+.edge-text { 
+    flex: 1; 
+}
+.edge-number {
+    font-size: 11px; 
+    font-weight: 700; 
+    letter-spacing: .12em;
+    text-transform: uppercase; 
+    color: #A8C4DF; 
+    margin-bottom: 14px;
+}
+.edge-text h3 {
+    font-size: 30px; 
+    font-weight: 700; 
+    color: #0F172A;
+    letter-spacing: -.02em; 
+    margin-bottom: 16px; 
+    line-height: 1.2;
+}
+.edge-text p { 
+    font-size: 16px; 
+    color: #64748B; 
+    line-height: 1.7; 
+    max-width: 440px; }
+.edge-bullets {
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+    max-width: 480px;
+}
+.edge-bullets li {
+    font-size: 15px; 
+    color: #64748B; 
+    line-height: 1.65;
+    padding-left: 20px; 
+    position: relative;
+}
+.edge-bullets li::before {
+    content: '—';
+    position: absolute; 
+    left: 0;
+    color: #A8C4DF; 
+    font-weight: 700;
+}
+.edge-bullets li strong { 
+    color: #0F172A; 
+    font-weight: 600; 
+}
+.edge-bullets li em { 
+    color: #4A7FA5; 
+    font-style: italic; 
+}
+
+
+/* CONTACT */
+.section-contact {
+    background: #1B2B47;
+    padding: 80px;
+}
+.contact-inner {
+    max-width: 640px; 
+    margin: 0 auto; 
+    text-align: center;
+}
+.contact-inner .section-eyebrow { 
+    color: #A8C4DF; 
+}
+.contact-inner h2 {
+    font-size: 36px; 
+    font-weight: 700; 
+    color: #FFFFFF;
+    letter-spacing: -.02em; 
+    margin-bottom: 12px;
+}
+.contact-inner > p {
+    font-size: 16px; 
+    color: #A8C4DF; 
+    line-height: 1.6; 
+    margin-bottom: 48px;
+}
+.contact-form { 
+    text-align: left; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 18px; }
+.form-row { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 18px; 
+}
+.form-group { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+}
+.form-group label {
+    font-size: 12px; 
+    font-weight: 600; 
+    color: #A8C4DF;
+    letter-spacing: .04em; 
+    text-transform: uppercase;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(168,196,223,.3);
+    border-radius: 7px; padding: 13px 16px;
+    font-size: 14px; font-family: 'Inter', sans-serif;
+    color: #FFFFFF; outline: none;
+    transition: border .2s;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,.3); }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: #A8C4DF; background: rgba(255,255,255,.1); }
+.form-group select { color: rgba(255,255,255,.5); cursor: pointer; }
+.form-group select option { background: #1B2B47; color: #fff; }
+.form-group textarea { resize: vertical; min-height: 110px; }
+.btn-connect {
+    width: 100%; background: #A8C4DF; color: #0F172A;
+    font-size: 15px; font-weight: 700; letter-spacing: .04em;
+    text-transform: uppercase; padding: 16px;
+    border-radius: 7px; border: none; cursor: pointer;
+    transition: background .2s;
+}
+.btn-connect:hover { background: #FFFFFF; }
+
+
 
