@@ -66,6 +66,9 @@ nav {
 .btn-nav:hover { 
     background: #4A7FA5; 
 }
+.nav-links a.btn-nav {
+    color: #FFFFFF;
+}
 
 /* HERO */
 .hero {
