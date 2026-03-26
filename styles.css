@@ -249,18 +249,15 @@ nav {
     letter-spacing: .08em;
     text-transform: uppercase; 
     color: #4A7FA5; 
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 .exp-card-role { 
     font-size: 15px; 
     font-weight: 700; 
     color: #0F172A; 
-    margin-bottom: 4px; 
-}
-.exp-card-date { 
-    font-size: 11px; 
-    color: #94A3B8; 
-    margin-bottom: 12px; 
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #E2E8F0
 }
 .exp-card-desc { 
     font-size: 13px; 
