@@ -1,9 +1,29 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+// Respond with JSON
+header('Content-Type: application/json; charset=utf-8');
+header('X-Content-Type-Options: nosniff');
+
+ini_set('display_errors', 0);
 error_reporting(E_ALL);
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['success' => false, 'message' => 'Method not allowed. ']);
+    exit;
+}
+
+// Load DB credentials
 include 'config.php';
+
+// Sanitise input
+$name      = htmlspecialchars(trim($_POST['name']      ?? ''), ENT_QUOTES, 'UTF-8');
+$email     = htmlspecialchars(trim($_POST['email']     ?? ''), ENT_QUOTES, 'UTF-8');
+$category  = htmlspecialchars(trim($_POST['category']  ?? ''), ENT_QUOTES, 'UTF-8');
+$challenge = htmlspecialchars(trim($_POST['challenge'] ?? ''), ENT_QUOTES, 'UTF-8');
+
+// Server-side validation
+$allowed = ['sales', 'ai', 'consulting', 'hiring', 'other'];
+$error = [];
 
 // Connect
 $conn = new mysqli($host, $username, $password, $dbname);
