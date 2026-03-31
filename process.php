@@ -6,6 +6,7 @@ header('X-Content-Type-Options: nosniff');
 ini_set('display_errors', 0);
 error_reporting(E_ALL);
 
+// POST only
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     echo json_encode(['success' => false, 'message' => 'Method not allowed. ']);
@@ -24,6 +25,17 @@ $challenge = htmlspecialchars(trim($_POST['challenge'] ?? ''), ENT_QUOTES, 'UTF-
 // Server-side validation
 $allowed = ['sales', 'ai', 'consulting', 'hiring', 'other'];
 $error = [];
+
+if (strlen($name) < 2)                             $errors[] = 'Name is too short.';
+if (!filter_var($email, FILTER_VALIDATE_EMAIL))    $errors[] = 'Invalid email address.';
+if (!in_array($category, $allowed, true))          $errors[] = 'Invalid category.';
+if (strlen($challenge) < 10)                       $errors[] = 'Message is too short.';
+
+if (!empty($errors)) {
+    http_response_code(422);
+    echo json_encode(['success' => false, 'message' => implode(' ', $errors)]);
+    exit;
+}
 
 // Connect
 $conn = new mysqli($host, $username, $password, $dbname);
