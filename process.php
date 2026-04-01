@@ -24,7 +24,7 @@ $challenge = htmlspecialchars(trim($_POST['challenge'] ?? ''), ENT_QUOTES, 'UTF-
 
 // Server-side validation
 $allowed = ['sales', 'ai', 'consulting', 'hiring', 'other'];
-$error = [];
+$errors = [];
 
 if (strlen($name) < 2)                             $errors[] = 'Name is too short.';
 if (!filter_var($email, FILTER_VALIDATE_EMAIL))    $errors[] = 'Invalid email address.';
