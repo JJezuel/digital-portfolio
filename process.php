@@ -1,25 +1,26 @@
 <?php
 
-// 1. Allow the same origin to make requests
+// 1. CORS Headers (Crucial for AJAX)
 header("Access-Control-Allow-Origin: *"); 
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
+header('Content-Type: application/json; charset=utf-8');
 
-// 2. Handle the Preflight (OPTIONS) request
+// 2. Handle Preflight
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit;
 }
 
-// 3. Then keep your existing POST check
+// 3. Method Check
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     echo json_encode(['success' => false, 'message' => 'Method not allowed.']);
     exit;
 }
 
-// Load DB credentials
-include 'config.php';
+// 4. Load Credentials
+require_once 'config.php';
 
 // Respond with JSON
 header('Content-Type: application/json; charset=utf-8');
@@ -27,13 +28,6 @@ header('X-Content-Type-Options: nosniff');
 
 ini_set('display_errors', 0);
 error_reporting(E_ALL);
-
-// POST only
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    echo json_encode(['success' => false, 'message' => 'Method not allowed. ']);
-    exit;
-}
 
 // Sanitise input
 $name      = htmlspecialchars(trim($_POST['name']      ?? ''), ENT_QUOTES, 'UTF-8');
