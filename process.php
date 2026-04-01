@@ -1,4 +1,8 @@
 <?php
+
+// Load DB credentials
+include 'config.php';
+
 // Respond with JSON
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
@@ -12,9 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo json_encode(['success' => false, 'message' => 'Method not allowed. ']);
     exit;
 }
-
-// Load DB credentials
-include 'config.php';
 
 // Sanitise input
 $name      = htmlspecialchars(trim($_POST['name']      ?? ''), ENT_QUOTES, 'UTF-8');
