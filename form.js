@@ -54,7 +54,7 @@
     const body = new FormData(form);
 
     try {
-      const res  = await fetch('https://jezueldubero.com/process.php', { method: 'POST', body });
+      const res  = await fetch('process.php', { method: 'POST', body });
       const data = await res.json();
 
       if (data.success) {
