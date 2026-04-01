@@ -37,34 +37,41 @@ if (!empty($errors)) {
     exit;
 }
 
-// Connect
+// Connect & insert
 $conn = new mysqli($host, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    error_log('DB connect error: ' . $conn->connect_error);
+    http_response_code(500);
+    echo json_encode(['success' => false, 'message' => 'Server error — please try again later.']);
+    exit;
 }
 
-// Process Form
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize inputs to prevent basic scripts from being injected
-    $name      = htmlspecialchars($_POST['name']);
-    $email     = htmlspecialchars($_POST['email']);
-    $category  = htmlspecialchars($_POST['category']);
-    $challenge = htmlspecialchars($_POST['challenge']);
+$stmt = $conn->prepare(
+    "INSERT INTO submissions (name, email, category, challenge) VALUES (?, ?, ?, ?)"
+);
 
-    // Insert into Database (Table name: submissions)
-    $stmt = $conn->prepare("INSERT INTO submissions (name, email, category, challenge) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $name, $email, $category, $challenge);
-
-    if ($stmt->execute()) {
-        // Redirect back or show success
-        echo "<h1>Success!</h1><p>Thank you, $name. I will be in touch soon.</p>";
-        echo '<a href="index.html">Return to website</a>';
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    $stmt->close();
+if (!$stmt) {
+    error_log('Prepare failed: ' . $conn->error);
+    http_response_code(500);
+    echo json_encode(['success' => false, 'message' => 'Server error — please try again later.']);
+    $conn->close();
+    exit;
 }
+
+$stmt->bind_param('ssss', $name, $email, $category, $challenge);
+
+if ($stmt->execute()) {
+    echo json_encode([
+        'success' => true,
+        'message' => "Thanks {$name} — I've received your message and will be in touch soon."
+    ]);
+} else {
+    error_log('Execute error: ' . $stmt->error);
+    http_response_code(500);
+    echo json_encode(['success' => false, 'message' => 'Server error — please try again later.']);
+}
+
+$stmt->close();
 $conn->close();
 ?>
