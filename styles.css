@@ -562,3 +562,19 @@ footer {
     .style-guide { padding: 24px; }
 }
 
+    /* ─── FORM VALIDATION ────────────────────────────────── */
+    .field-error {
+      font-size: 11px; font-weight: 500;
+      color: #f87171; margin-top: 5px; display: none;
+    }
+    .field-error.visible { display: block; }
+    .form-group input.invalid,
+    .form-group select.invalid,
+    .form-group textarea.invalid { border-color: #f87171; }
+    .form-status {
+      text-align: center; font-size: 14px; font-weight: 600;
+      padding: 14px; border-radius: 7px; display: none; margin-top: 4px;
+    }
+    .form-status.success { background: rgba(74,127,165,.25); color: #A8C4DF; display: block; }
+    .form-status.error   { background: rgba(248,113,113,.15); color: #f87171; display: block; }
+    .btn-connect:disabled { opacity: .6; cursor: not-allowed; }
