@@ -22,7 +22,6 @@ jobs:
           **/.git*
           **/.github*
           **/node_modules/**
-          process.php
           cgi_bin/
           nc_assets/
           .htaccess
